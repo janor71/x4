@@ -1,6 +1,7 @@
 // CAR COMPETITION 
 
-// TRYING TO RESET TO STAR GAME AGAIN. 
+
+//ALSO TRYING TO RESET TO STAR GAME AGAIN. 
 
 
 // AUTHOR== Rebeca Janowicz
@@ -10,22 +11,30 @@ String title=  "CAR COMPETITION";
 
 String author=  "REBECA JANOWICZ";
 
-float x = 40;
-float x1 = 40;
+float x;
+float x1;
 float y;
 float y1;
-float dx = random(1,4);
-float dx1= random(1,4);
+float dx;
+float dx1;
 int score; 
 
 void setup() {
     size(500,500);
-    
+    x = 40;
+    x1 = 40;
     y = height/4;     // HEIGHT FOR CAR 1
     y1 = height/2;    //HEIGHT FOR CAR 2
-    score = 0;
+    dx = random(1,4);
+    dx1= random(1,4);
+    score = 0; 
     
-    //reset();  **************
+    
+    //y = height/4;     // HEIGHT FOR CAR 1
+    //y1 = height/2;    //HEIGHT FOR CAR 2
+    //score = 0;
+    
+    
 }
 // DECLARING VARIABLES 
 void draw() {
@@ -47,9 +56,14 @@ void draw() {
      rect(x1,y1, 75,50);    // car 2
      stroke(0);
      fill(0);
+     textSize(10);
      text("CAR ONE", x-25,y);
      text(" CAR TWO",x1-25,y1);
-     text(score,width/2,height-200);
+     textSize(20);
+     text(score,width/2,height-50);
+     fill(191,31,172);
+     
+    
      
  }
  
@@ -74,15 +88,20 @@ void draw() {
   void message() {
     strokeWeight(1);
     fill(254,255,15);
+    textSize(10);
     text(author,width/2,40);
     text(title,width/2,60);
   }
    
-/* HANDLERS:  keys & click
+ // WATCHING THE GAME SCORE. 
+  void reset() {
+    setup();
+  }
+ 
   void keyPressed() {
       if (key == 'q') exit();
       if (key == 'r') reset();
     }
      
-   } */
+
  
