@@ -1,9 +1,14 @@
 // CAR COMPETITION 
-// AUTHOR== Rebeca Janowicz
 
 // TRY TO ADD A SCORE FUNCTION AND PLAY GAME BUT I DON'T KNOW HOW. 
 //ALSO TRYING TO RESET TO STAR GAME AGAIN
-// CAR TWO LEAVES THE SCREEN AND COMEs BACK LATER, I WANT IT TO FOLLOW SIMILAR COMMAND AS CAR ONE. 
+// CAR TWO LEAVES THE SCREEN AND COME BACK LATER, I WANT IT TO FOLLOW SIMILAR COMMAND AS CAR ONE. 
+// AUTHOR== Rebeca Janowicz
+
+
+String title=  "CAR COMPETITION";
+
+String author=  "REBECA JANOWICZ";
 
 float x = 40;
 float x1 = 40;
@@ -15,10 +20,12 @@ int score;
 
 void setup() {
     size(500,500);
+    
     y = height/4;     // HEIGHT FOR CAR 1
     y1 = height/2;    //HEIGHT FOR CAR 2
     score = 0;
-    //reset();
+    
+    //reset();  **************
 }
 // DECLARING VARIABLES 
 void draw() {
@@ -27,7 +34,7 @@ void draw() {
     displayCar();
     driveCar();
     checkEdges();
-    
+    message();
 }
  // DRAWING CARS
  void displayCar () {
@@ -59,8 +66,15 @@ void draw() {
        if (x1 > width-10 || x1 < 0 ) {
          dx1= dx1 * -1;
    }
+       }
+   }
+  void message() {
+    strokeWeight(1);
+    fill(254,255,15);
+    text(author,width/2,40);
+    text(title,width/2,60);
+  }
    
- }
 /* HANDLERS:  keys & click
   void keyPressed() {
       if (key == 'q') exit();
@@ -68,4 +82,4 @@ void draw() {
     }
      
    } */
- }
+ 
