@@ -1,7 +1,7 @@
 // CAR COMPETITION 
 
-// TRY TO ADD A SCORE FUNCTION AND PLAY GAME BUT I DON'T KNOW HOW. 
-//ALSO TRYING TO RESET TO STAR GAME AGAIN
+// TRYING TO RESET TO STAR GAME AGAIN. 
+
 
 // AUTHOR== Rebeca Janowicz
 
@@ -14,8 +14,8 @@ float x = 40;
 float x1 = 40;
 float y;
 float y1;
-float dx = random(1,3);
-float dx1= random(1,3);
+float dx = random(1,4);
+float dx1= random(1,4);
 int score; 
 
 void setup() {
@@ -49,6 +49,7 @@ void draw() {
      fill(0);
      text("CAR ONE", x-25,y);
      text(" CAR TWO",x1-25,y1);
+     text(score,width/2,height-200);
      
  }
  
@@ -62,11 +63,13 @@ void draw() {
    void checkEdges() {
        if (x > width-10 || x <0 ) {
          dx= dx * -1;
-         }
+         score -= random(1,5);
+        }
        if (x1 > width-10 || x1 < 0 ) {
          dx1= dx1 * -1;
+         score += random(1,5);;
    }
-       }
+       
    }
   void message() {
     strokeWeight(1);
