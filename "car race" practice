@@ -1,0 +1,71 @@
+// CAR COMPETITION 
+// AUTHOR== Rebeca Janowicz
+
+// TRY TO ADD A SCORE FUNCTION AND PLAY GAME BUT I DON'T KNOW HOW. 
+//ALSO TRYING TO RESET TO STAR GAME AGAIN
+// CAR TWO LEAVES THE SCREEN AND COMEs BACK LATER, I WANT IT TO FOLLOW SIMILAR COMMAND AS CAR ONE. 
+
+float x = 40;
+float x1 = 40;
+float y;
+float y1;
+float dx = random(1,3);
+float dx1= random(1,3);
+int score; 
+
+void setup() {
+    size(500,500);
+    y = height/4;     // HEIGHT FOR CAR 1
+    y1 = height/2;    //HEIGHT FOR CAR 2
+    score = 0;
+    //reset();
+}
+// DECLARING VARIABLES 
+void draw() {
+    background(104,103,188);
+    
+    displayCar();
+    driveCar();
+    checkEdges();
+    
+}
+ // DRAWING CARS
+ void displayCar () {
+     noStroke();
+     fill(184,245,175);
+     rectMode(CENTER); 
+     fill(0,255,0);
+     rect(x,y, 75,50);      // car 1
+     fill(247,147,122);
+     rect(x1,y1, 75,50);    // car 2
+     stroke(0);
+     fill(0);
+     text("CAR ONE", x-25,y);
+     text(" CAR TWO",x1-25,y1);
+     
+ }
+ 
+ // MOVE THE CAR
+   void driveCar (){
+       x = x + dx;  
+       x1 = x1 + dx1;
+       
+   }
+   
+   void checkEdges() {
+       if (x > width-10 || x <0 ) {
+         dx= dx * -1;
+         
+       if (x1 > width-10 || x1 < 0 ) {
+         dx1= dx1 * -1;
+   }
+   
+ }
+/* HANDLERS:  keys & click
+  void keyPressed() {
+      if (key == 'q') exit();
+      if (key == 'r') reset();
+    }
+     
+   } */
+ }
