@@ -1,14 +1,8 @@
 // CAR COMPETITION 
-
-
-//ALSO TRYING TO RESET TO STAR GAME AGAIN. 
-
-
 // AUTHOR== Rebeca Janowicz
 
 
 String title=  "CAR COMPETITION";
-
 String author=  "REBECA JANOWICZ";
 
 float x;
@@ -28,12 +22,6 @@ void setup() {
     dx = random(1,4);
     dx1= random(1,4);
     score = 0; 
-    
-    
-    //y = height/4;     // HEIGHT FOR CAR 1
-    //y1 = height/2;    //HEIGHT FOR CAR 2
-    //score = 0;
-    
     
 }
 // DECLARING VARIABLES 
@@ -63,7 +51,6 @@ void draw() {
      text(score,width/2,height-50);
      fill(191,31,172);
      
-    
      
  }
  
