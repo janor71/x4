@@ -2,7 +2,7 @@
 
 // TRY TO ADD A SCORE FUNCTION AND PLAY GAME BUT I DON'T KNOW HOW. 
 //ALSO TRYING TO RESET TO STAR GAME AGAIN
-// CAR TWO LEAVES THE SCREEN AND COME BACK LATER, I WANT IT TO FOLLOW SIMILAR COMMAND AS CAR ONE. 
+
 // AUTHOR== Rebeca Janowicz
 
 
@@ -62,7 +62,7 @@ void draw() {
    void checkEdges() {
        if (x > width-10 || x <0 ) {
          dx= dx * -1;
-         
+         }
        if (x1 > width-10 || x1 < 0 ) {
          dx1= dx1 * -1;
    }
