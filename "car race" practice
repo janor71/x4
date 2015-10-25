@@ -11,7 +11,8 @@ float y;
 float y1;
 float dx;
 float dx1;
-int score; 
+int score1; 
+int score2;
 
 void setup() {
     size(500,500);
@@ -19,9 +20,10 @@ void setup() {
     x1 = 40;
     y = height/4;     // HEIGHT FOR CAR 1
     y1 = height/2;    //HEIGHT FOR CAR 2
-    dx = random(1,4);
-    dx1= random(1,4);
-    score = 0; 
+    dx = random(1,5);
+    dx1= random(1,5);
+    score1 = 0; 
+    score2=0;
     
 }
 // DECLARING VARIABLES 
@@ -48,13 +50,16 @@ void draw() {
      text("CAR ONE", x-25,y);
      text(" CAR TWO",x1-25,y1);
      textSize(20);
-     text(score,width/2,height-50);
+     text("CAR ONE", width/2-75, height-70);
+     text("CAR TWO", width/2+50, height-70);
+     text(score1,width/2,height-50);
+     text(score2,width/2+50, height-50);
      fill(191,31,172);
      
      
  }
  
- // MOVE THE CAR
+ // MOVE THE CARs
    void driveCar (){
        x = x + dx;  
        x1 = x1 + dx1;
@@ -64,11 +69,11 @@ void draw() {
    void checkEdges() {
        if (x > width-10 || x <0 ) {
          dx= dx * -1;
-         score -= random(1,5);
+         score1 += random(1,5);
         }
        if (x1 > width-10 || x1 < 0 ) {
          dx1= dx1 * -1;
-         score += random(1,5);;
+         score2 += random(1,5);;
    }
        
    }
